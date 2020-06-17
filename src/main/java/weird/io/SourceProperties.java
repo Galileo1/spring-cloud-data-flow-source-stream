@@ -2,7 +2,6 @@ package weird.io;
 
 import lombok.Data;
 import org.springframework.boot.context.properties.ConfigurationProperties;
-import org.springframework.validation.annotation.Validated;
 
 /**
  * Class defining the properties for the source.
@@ -13,25 +12,23 @@ import org.springframework.validation.annotation.Validated;
  *
  */
 @ConfigurationProperties("exchange")
-@Validated
 @Data
 public class SourceProperties {
 
     /**
-     * Start date for the historic exchange data.
-     * Note: ("Exchange API shows data no earlier than 1999-01-01 ")
+     * Company listed in the stock exchange Symbol.
+     * To get the list of all company https://finnhub.io/api/v1/stock/symbol?exchange=US&token
      */
-    private String startDate = "2019-12-31";
+    private String symbol = "FB";
 
     /**
-     * End date for the historic exchange data.
-     * Note: ("Exchange API shows data no later than current date ")
+     * Poll interval.
      */
-    private String endDate = "2020-06-07";
+    private int pollInterval = 1;
 
     /**
-     * Delay the trigger to let application boot.
+     * Http tokens for if necessary.
      */
-    private long triggerWithDelay = 150L;
+    private String tokens = "brkrm9frh5r8d4o965rg";
 
 }

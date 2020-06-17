@@ -1,0 +1,6 @@
+
+properties:
+    baseurl: https://finnhub.io/
+    resources:
+        version: api/v1/
+        quotes: quote

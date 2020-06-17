@@ -173,10 +173,10 @@
           <configuration>
             <to>
               <image>registry.hub.docker.com/gaurva/${artifactId}</image>
-              <tags>test1</tags>
+              <tags>rev2test</tags>
               <auth>
                 <username>gaurva</username>
-                <password>Mesopotamia@0</password>
+                <password></password>
               </auth>
             </to>
           </configuration>
